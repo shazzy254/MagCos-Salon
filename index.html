@@ -100,5 +100,18 @@
     }, 500); // delay in milliseconds before pop-up (0.5 seconds)
   });
 </script>
+<script>
+  window.addEventListener("load", function() {
+    // Show popup 1 second after page loads
+    setTimeout(() => {
+      document.getElementById("popup").classList.add("active");
+    }, 1000);
+  });
+
+  // Close button
+  document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("popup").classList.remove("active");
+  });
+</script>
 </body>
 </html>
